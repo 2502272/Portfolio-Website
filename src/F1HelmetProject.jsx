@@ -3,13 +3,13 @@
 
 import "./ProjectPage.css"
 
-import frontView from "./assets/Projects/1). F1 Helment-SolidWorks/F1-Front view.JPG"
-import backView from "./assets/Projects/1). F1 Helment-SolidWorks/F1-Back view.JPG"
-import sideView from "./assets/Projects/1). F1 Helment-SolidWorks/F1-Side view.JPG"
-import topView from "./assets/Projects/1). F1 Helment-SolidWorks/F1-Top view.JPG"
-import dualView from "./assets/Projects/1). F1 Helment-SolidWorks/F1-Dual view.png"
-import multiView from "./assets/Projects/1). F1 Helment-SolidWorks/F1- Multiview.png"
-import renderedView from "./assets/Projects/1). F1 Helment-SolidWorks/F1-Rendered Isolated view.JPG"
+import frontView from "./assets/Projects/F1 Helment-SolidWorks/F1-Front view.JPG"
+import backView from "./assets/Projects/F1 Helment-SolidWorks/F1-Back view.JPG"
+import sideView from "./assets/Projects/F1 Helment-SolidWorks/F1-Side view.JPG"
+import topView from "./assets/Projects/F1 Helment-SolidWorks/F1-Top view.JPG"
+import dualView from "./assets/Projects/F1 Helment-SolidWorks/F1-Dual view.png"
+import multiView from "./assets/Projects/F1 Helment-SolidWorks/F1- Multiview.png"
+import renderedView from "./assets/Projects/F1 Helment-SolidWorks/F1-Rendered Isolated view.JPG"
 
 function F1HelmetProject({ setSelectedProject }) {
 

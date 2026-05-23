@@ -2,10 +2,10 @@
 
 import "./ProjectPage.css"
 
-import layout from "./assets/Projects/4). V6 Engine-AutoCAD/V6 Engine-Layout.jpg"
-import multi from "./assets/Projects/4). V6 Engine-AutoCAD/V6 Engine-Solid Modelling Multi view.jpg"
-import iso from "./assets/Projects/4). V6 Engine-AutoCAD/V6 Engine-Isolated view.jpg"
-import internal from "./assets/Projects/4). V6 Engine-AutoCAD/V6 Engine-Internal Assembly.jpg"
+import layout from "./assets/Projects/V6 Engine-AutoCAD/V6 Engine-Layout.jpg"
+import multi from "./assets/Projects/V6 Engine-AutoCAD/V6 Engine-Solid Modelling Multi view.jpg"
+import iso from "./assets/Projects/V6 Engine-AutoCAD/V6 Engine-Isolated view.jpg"
+import internal from "./assets/Projects/V6 Engine-AutoCAD/V6 Engine-Internal Assembly.jpg"
 
 function V6Engine({ setSelectedProject }) {
 

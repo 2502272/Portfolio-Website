@@ -2,7 +2,7 @@
 
 import "./ProjectPage.css"
 
-import projectVideo from "./assets/Projects/6). Hostel Management System-C++/Hostel Management System-Video.mp4"
+import projectVideo from "./assets/Projects/Hostel Management System/Hostel Management System-Video.mp4"
 
 function HostelManagementProject({ setSelectedProject }) {
 

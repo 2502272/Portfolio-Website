@@ -2,10 +2,10 @@
 
 import "./ProjectPage.css"
 
-import multiView from "./assets/Projects/5). Truss Bridge-SolidWorks + 3D printed/Truss Bridge-Multi view.png"
-import realWorldView from "./assets/Projects/5). Truss Bridge-SolidWorks + 3D printed/Truss Bridge-Real World view.png"
-import sideView from "./assets/Projects/5). Truss Bridge-SolidWorks + 3D printed/Truss Bridge-Side view.JPG"
-import trimetricView from "./assets/Projects/5). Truss Bridge-SolidWorks + 3D printed/Truss Bridge-Trimetric view.JPG"
+import multiView from "./assets/Projects/Truss Bridge-SolidWorks and 3D printed/Truss Bridge-Multi view.png"
+import realWorldView from "./assets/Projects/Truss Bridge-SolidWorks and 3D printed/Truss Bridge-Real World view.png"
+import sideView from "./assets/Projects/Truss Bridge-SolidWorks and 3D printed/Truss Bridge-Side view.JPG"
+import trimetricView from "./assets/Projects/Truss Bridge-SolidWorks and 3D printed/Truss Bridge-Trimetric view.JPG"
 
 function TrussBridgeProject({ setSelectedProject }) {
 

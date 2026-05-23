@@ -2,10 +2,10 @@
 
 import "./ProjectPage.css"
 
-import video from "./assets/Projects/2). Robotic Leg Mechanism-SolidWorks/Robo Leg Video.mp4"
+import video from "./assets/Projects/Robotic Leg Mechanism-SolidWorks/Robo Leg Video.mp4"
 
-import dualView from "./assets/Projects/2). Robotic Leg Mechanism-SolidWorks/Robo Leg-Dual view.png"
-import isolatedView from "./assets/Projects/2). Robotic Leg Mechanism-SolidWorks/Robo Leg-Isolated view.png"
+import dualView from "./assets/Projects/Robotic Leg Mechanism-SolidWorks/Robo Leg-Dual view.png"
+import isolatedView from "./assets/Projects/Robotic Leg Mechanism-SolidWorks/Robo Leg-Isolated view.png"
 
 function RoboticLegProject({ setSelectedProject }) {
 

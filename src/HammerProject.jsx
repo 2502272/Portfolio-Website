@@ -2,11 +2,11 @@
 
 import "./ProjectPage.css"
 
-import multiView from "./assets/Projects/3). Multifunctional Hammer-SolidWorks+Workshop/Multifunctional Hammer-Multi view.png"
-import realWorld from "./assets/Projects/3). Multifunctional Hammer-SolidWorks+Workshop/Multifunctional Hammer-Real World image.jpg"
-import exploded from "./assets/Projects/3). Multifunctional Hammer-SolidWorks+Workshop/Multifunctional Hammer-Rendered Exploded view.JPG"
-import isolated from "./assets/Projects/3). Multifunctional Hammer-SolidWorks+Workshop/Multifunctional Hammer-Rendered Isolated view.JPG"
-import workshop from "./assets/Projects/3). Multifunctional Hammer-SolidWorks+Workshop/Multifunctional Hammer-Workshop Manufacturing Image.jpg"
+import multiView from "./assets/Projects/Multifunctional Hammer-SolidWorks and Workshop/Multifunctional Hammer-Multi view.png"
+import realWorld from "./assets/Projects/Multifunctional Hammer-SolidWorks and Workshop/Multifunctional Hammer-Real World image.jpg"
+import exploded from "./assets/Projects/Multifunctional Hammer-SolidWorks and Workshop/Multifunctional Hammer-Rendered Exploded view.JPG"
+import isolated from "./assets/Projects/Multifunctional Hammer-SolidWorks and Workshop/Multifunctional Hammer-Rendered Isolated view.JPG"
+import workshop from "./assets/Projects/Multifunctional Hammer-SolidWorks and Workshop/Multifunctional Hammer-Workshop Manufacturing Image.jpg"
 
 function HammerProject({ setSelectedProject }) {
 
