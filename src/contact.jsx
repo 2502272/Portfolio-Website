@@ -165,7 +165,7 @@ function Contact() {
             <div className="social-icons">
 
               <a 
-                href="https://www.linkedin.com/in/tayyab-mahmood-b070b62b9/" 
+                href="https://www.linkedin.com/in/tayyab-mahmood-adil-aaa8a5397/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B9YthyNbNSeitxA5pNusO9w%3D%3D" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-icon"
