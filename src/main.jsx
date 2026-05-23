@@ -3,16 +3,16 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 
-import Header from './Header.jsx'
+import Header from './header.jsx'
 import Portfolio from './portfolio.jsx'
-import Contact from './Contact.jsx'
-import Footer from './Footer.jsx'
+import Contact from './contact.jsx'
+import Footer from './footer.jsx'
 
 import './portfolio.css'
-import './Header.css'
-import './Footer.css'
+import './header.css'
+import './footer.css'
 import './ProjectPage.css'  // Universal CSS for all project pages
-import './Contact.css'       // Contact page CSS
+import './contact.css'       // Contact page CSS
 
 function App() {
 
