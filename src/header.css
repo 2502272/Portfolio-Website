@@ -1,0 +1,141 @@
+/* Professional Responsive Portfolio Header Styling */
+
+.header {
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px 10%;
+
+  background: rgba(11, 15, 25, 0.75);
+
+  backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  transition: 0.4s ease;
+}
+
+.header-logo {
+  font-size: 30px;
+
+  font-weight: 700;
+
+  background: linear-gradient(to right, #ffffff, #60a5fa);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar a {
+  color: #d1d5db;
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  position: relative;
+
+  transition: 0.35s ease;
+}
+
+/* Hover Glow Effect */
+
+.navbar a:hover {
+  color: #5eead4;
+
+  text-shadow: 0 0 12px rgba(94, 234, 212, 0.6);
+}
+
+/* Underline Animation */
+
+.navbar a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0%;
+  height: 3px;
+
+  background: #5eead4;
+
+  border-radius: 20px;
+
+  transition: 0.35s ease;
+}
+
+.navbar a:hover::after,
+.navbar .active-link::after {
+  width: 100%;
+}
+
+/* Active Link */
+
+.navbar .active-link {
+  color: #5eead4;
+
+  text-shadow: 0 0 10px rgba(94, 234, 212, 0.55);
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+  .header {
+    padding: 20px 6%;
+  }
+
+  .navbar {
+    gap: 24px;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .header {
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .header-logo {
+    font-size: 26px;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+}
