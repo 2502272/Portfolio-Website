@@ -1,6 +1,6 @@
 // Professional Responsive Portfolio Header with Active Scroll Navigation
 
-import "./Header.css"
+import "./header.css"
 import { useEffect, useState } from "react"
 
 function Header() {
@@ -113,7 +113,7 @@ function Header() {
         </a>
 
         <a
-          href="/#contact"
+          href="#contact"
           onClick={handleContactClick}
           className={isContactPage ? "active-link" : ""}
         >

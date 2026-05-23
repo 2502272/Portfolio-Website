@@ -1,6 +1,6 @@
 // Contact Page with Working Email Form (Web3Forms Integration)
 
-import "./Contact.css"
+import "./contact.css"
 import { useState } from "react"
 
 function Contact() {

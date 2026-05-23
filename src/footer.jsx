@@ -1,6 +1,6 @@
 // Professional Responsive Portfolio Footer Component
 
-import "./Footer.css"
+import "./footer.css"
 
 function Footer() {
 
