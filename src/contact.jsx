@@ -1,4 +1,4 @@
-// Contact Page with Form and Contact Details
+// Contact Page with Working Email Form (Web3Forms Integration)
 
 import "./Contact.css"
 import { useState } from "react"
@@ -13,7 +13,6 @@ function Contact() {
   })
 
   const [formStatus, setFormStatus] = useState({
-    submitted: false,
     loading: false,
     success: false,
     error: false,
@@ -31,47 +30,62 @@ function Contact() {
     e.preventDefault()
     
     setFormStatus({
-      submitted: false,
       loading: true,
       success: false,
       error: false,
       message: ""
     })
 
-    // Since this is a static portfolio without backend,
-    // we'll simulate email sending and show instructions
-    
-    setTimeout(() => {
-      // Simulate API call
-      console.log("Form Data:", formData)
+    try {
+      // Create FormData object
+      const formDataToSend = new FormData()
+      formDataToSend.append("access_key", "a10fc962-ae16-4902-90c3-d5dd7c65eaf7")
+      formDataToSend.append("name", formData.name)
+      formDataToSend.append("email", formData.email)
+      formDataToSend.append("subject", formData.subject)
+      formDataToSend.append("message", formData.message)
       
-      setFormStatus({
-        submitted: true,
-        loading: false,
-        success: true,
-        error: false,
-        message: "Thank you for your message! I'll get back to you soon. (Demo: In production, this would send an email to t1412530@gmail.com)"
+      // Optional: Add redirect URL (optional)
+      // formDataToSend.append("redirect", "https://yourwebsite.com/thank-you")
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend
       })
-      
-      // Clear form after successful submission
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
-      })
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setFormStatus(prev => ({
-          ...prev,
-          submitted: false,
-          success: false,
+
+      const data = await response.json()
+
+      if (data.success) {
+        setFormStatus({
+          loading: false,
+          success: true,
+          error: false,
+          message: "✅ Message sent successfully! I'll get back to you soon."
+        })
+        
+        // Clear form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
           message: ""
-        }))
-      }, 5000)
-      
-    }, 1500)
+        })
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setFormStatus(prev => ({ ...prev, success: false, message: "" }))
+        }, 5000)
+      } else {
+        throw new Error(data.message || "Failed to send message")
+      }
+    } catch (error) {
+      setFormStatus({
+        loading: false,
+        success: false,
+        error: true,
+        message: "❌ Failed to send message. Please email me directly at t1412530@gmail.com"
+      })
+    }
   }
 
   const handleGoBack = () => {
@@ -194,7 +208,7 @@ function Contact() {
             <h2>Send a Message</h2>
 
             <p className="form-description">
-              Fill out the form below and I'll get back to you as soon as possible.
+              Fill out the form below and I'll receive your message directly to my email.
             </p>
 
             <form onSubmit={handleSubmit} className="contact-form">
@@ -282,8 +296,7 @@ function Contact() {
 
             <div className="form-note">
               <p>
-                * This is a demo contact form. In production, it would send emails directly to 
-                <a href="mailto:t1412530@gmail.com"> t1412530@gmail.com</a>
+                ✅ Your message will be sent directly to <strong>t1412530@gmail.com</strong>
               </p>
             </div>
 

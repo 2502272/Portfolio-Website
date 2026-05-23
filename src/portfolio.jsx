@@ -117,17 +117,110 @@ function Portfolio() {
 
             <section className="about-section" id="about">
 
-                <h2>About Me</h2>
+    <h2>About Me</h2>
 
-                <p>
-                    I focus on creating innovative and technically accurate engineering
-                    designs with a strong understanding of CAD tools and mechanical
-                    systems. My work combines creativity, functionality, and engineering
-                    precision to develop practical solutions and professional-grade
-                    models.
-                </p>
+    <p>
+        Mechanical engineering student specializing in CAD design and 2D/3D modeling, with hands-on experience in 
+        SolidWorks and AutoCAD. My goal is to design everything my mind imagines with a proper engineering approach. 
+        I am currently looking for new opportunities in CAD design and freelance work. If you are looking for someone 
+        who approaches every project with responsibility and dedication, let's connect!
+    </p>
 
-            </section>
+    {/* Quick Info Cards */}
+    <div className="about-info-grid">
+        <div className="info-card">
+            <h4>📍 Location</h4>
+            <p>Islamabad, Pakistan</p>
+        </div>
+        <div className="info-card">
+            <h4>📧 Email</h4>
+            <p>t1412530@gmail.com</p>
+        </div>
+        <div className="info-card">
+            <h4>📞 Phone</h4>
+            <p>0336 5815973</p>
+        </div>
+    </div>
+
+    {/* Qualification Section */}
+    <div className="about-subsection">
+        <h3>🎓 Qualification</h3>
+        
+        <div className="qualification-item">
+            <h4>Air University, Islamabad</h4>
+            <p className="degree">Bachelor of Mechanical Engineering</p>
+            <p className="result">CGPA: 3.75 (Current)</p>
+        </div>
+
+        <div className="qualification-item">
+            <h4>Army Public Schools & Colleges, Sarai Alamgir</h4>
+            <p className="degree">FSC (Pre-Engineering)</p>
+            <p className="result">Result: 87.1%</p>
+        </div>
+
+        <div className="qualification-item">
+            <h4>Saint Francis Schools & Colleges, Sarai Alamgir</h4>
+            <p className="degree">Matriculation (Science)</p>
+            <p className="result">Result: 88%</p>
+        </div>
+    </div>
+
+    {/* Skills Section */}
+    <div className="about-subsection">
+        <h3>💻 Skills</h3>
+        
+        <div className="skills-category">
+            <h4>CAD Software</h4>
+            <div className="skills-tags">
+                <span>SolidWorks (Intermediate)</span>
+                <span>AutoCAD 2D/3D (Intermediate)</span>
+                <span>CAD Rendering</span>
+            </div>
+        </div>
+
+        <div className="skills-category">
+            <h4>Programming</h4>
+            <div className="skills-tags">
+                <span>C++ (Intermediate)</span>
+            </div>
+        </div>
+
+        <div className="skills-category">
+            <h4>Tools & Other</h4>
+            <div className="skills-tags">
+                <span>Microsoft Office</span>
+                <span>Workshop Machining</span>
+                <span>3D Printing</span>
+            </div>
+        </div>
+    </div>
+
+    {/* Languages Section */}
+    <div className="about-subsection">
+        <h3>🌐 Languages</h3>
+        
+        <div className="languages-grid">
+            <div className="language-item">
+                <h4>English</h4>
+                <p>C1 - Advanced Academic Proficiency</p>
+            </div>
+            <div className="language-item">
+                <h4>German</h4>
+                <p>A-1 (In Progress)</p>
+            </div>
+            <div className="language-item">
+                <h4>Urdu</h4>
+                <p>Native</p>
+            </div>
+            <div className="language-item">
+                <h4>Punjabi</h4>
+                <p>Mother Tongue</p>
+            </div>
+        </div>
+    </div>
+
+
+</section>
 
             {/* Projects Section */}
 
