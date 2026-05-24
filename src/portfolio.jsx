@@ -177,94 +177,37 @@ function Portfolio() {
                     <div className="info-card">
                         <h4>📍 Location</h4>
                         <p>Islamabad, Pakistan</p>
-                    </div>
-                    <div className="info-card">
-                        <h4>📧 Email</h4>
-                        <p>11412530@gmail.com</p>
-                    </div>
-                    <div className="info-card">
-                        <h4>📞 Phone</h4>
-                        <p>0336-5815973</p>
-                    </div>
-                </div>
-
-                {/* Qualification Section */}
-                <div className="about-subsection">
-                    <h3>🎓 Qualification</h3>
-                    <div className="qualification-item">
-                        <h4>Air University, Islamabad</h4>
-                        <p className="degree">Bachelor of Mechanical Engineering</p>
-                        <p className="result" style={{ color: '#1dbf73', fontWeight: '600' }}>CGPA: 3.75 (Current Academic Standing)</p>
-                    </div>
-                    <div className="qualification-item">
-                        <h4>Army Public Schools & Colleges, Sarai Alamgir</h4>
-                        <p className="degree">FSC (Pre-Engineering)</p>
-                        <p className="result">Result: 87.1%</p>
-                    </div>
-                    <div className="qualification-item">
-                        <h4>Saint Francis Schools & Colleges, Sarai Alamgir</h4>
-                        <p className="degree">Matriculation (Science)</p>
-                        <p className="result">Result: 88%</p>
-                    </div>
-                </div>
-
-                {/* Technical Skills Sections */}
-                <div className="about-subsection">
-                    <h3>💻 Skills & Software Arsenal</h3>
-                    <div className="skills-category">
-                        <h4>CAD & Modeling Engine</h4>
-                        <div className="skills-tags">
-                            <span>SolidWorks (Surfacing, Mechanical Assemblies & Weldments)</span>
-                            <span>AutoCAD (2D Orthographic & 3D Drafting Layouts)</span>
-                            <span>CAD Photo-Realistic Rendering</span>
-                        </div>
-                    </div>
-                    <div className="skills-category">
-                        <h4>Programming & Engineering Logic</h4>
-                        <div className="skills-tags">
-                            <span>C++ (Object-Oriented Programming & Console Logic)</span>
-                        </div>
-                    </div>
-                    <div className="skills-category">
-                        <h4>Tools & Execution Practices</h4>
-                        <div className="skills-tags">
-                            <span>3D Printing & Slicing Optimization</span>
-                            <span>Workshop Machining & Precision Tolerances</span>
-                            <span>Microsoft Office Suite</span>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Languages Section */}
-                <div className="about-subsection">
-                    <h3>🌐 Languages</h3>
-                    <div className="languages-grid">
-                        <div className="language-item">
-                            <h4>English</h4>
-                            <p>C1 - Advanced Academic Proficiency</p>
-                        </div>
-                        <div className="language-item">
-                            <h4>German</h4>
-                            <p>A-1 Standard (In Progress)</p>
-                        </div>
-                        <div className="language-item">
-                            <h4>Urdu</h4>
-                            <p>Native Fluency</p>
-                        </div>
-                        <div className="language-item">
-                            <h4>Punjabi</h4>
-                            <p>Mother Tongue</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Projects Section - Renders images sequentially based on structural definitions */}
+                  {/* Projects Section - Click anywhere on the card to open details */}
             <section className="projects-section" id="projects">
                 <h2>Engineering Portfolio & Projects</h2>
                 <div className="projects-grid">
                     {projects.map((project) => (
-                        <div className="project-card" key={project.id} style={{ overflow: 'hidden' }}>
+                        <div 
+                            className="project-card" 
+                            key={project.id} 
+                            onClick={() => {
+                                const projectMap = {
+                                    1: "f1-helmet",
+                                    2: "robotic-leg",
+                                    3: "hammer",
+                                    4: "v6-engine",
+                                    5: "truss-bridge",
+                                    6: "hostel-management"
+                                }
+                                setSelectedProject(projectMap[project.id])
+                            }}
+                            style={{ 
+                                overflow: 'hidden', 
+                                cursor: 'pointer',
+                                transition: 'transform 0.2s ease, box-shadow 0.2s ease'
+                            }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.transform = 'scale(1.02)';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.transform = 'scale(1)';
+                            }}
+                        >
                             {project.image && (
                                 <div className="project-img-wrapper" style={{ width: '100%', height: '180px', backgroundColor: '#111' }}>
                                     <img 
@@ -282,28 +225,10 @@ function Portfolio() {
                                 </div>
                                 <h3>{project.title}</h3>
                                 <p>{project.description}</p>
-                                <button
-                                    className="details-btn"
-                                    onClick={() => {
-                                        const projectMap = {
-                                            1: "f1-helmet",
-                                            2: "robotic-leg",
-                                            3: "hammer",
-                                            4: "v6-engine",
-                                            5: "truss-bridge",
-                                            6: "hostel-management"
-                                        }
-                                        setSelectedProject(projectMap[project.id])
-                                    }}
-                                >
+                                <button className="details-btn" style={{ pointerEvents: 'none' }}>
                                     View Project Blueprints
                                 </button>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-        </div>
+</div>
     )
 }
 
