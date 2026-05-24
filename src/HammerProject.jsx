@@ -1,6 +1,7 @@
 // Detailed Multifunctional Hammer Project Showcase Page
-// Structured perfectly matching template style with live report button integration
+// Fixed view detail auto-scroll to top issue + matching template layout structure
 
+import { useEffect } from "react" // Imported to fix the scroll-to-bottom bug
 import "./ProjectPage.css"
 
 import multiView from "./assets/Projects/Multifunctional Hammer-SolidWorks and Workshop/Multifunctional Hammer-Multi view.png"
@@ -11,6 +12,11 @@ import workshop from "./assets/Projects/Multifunctional Hammer-SolidWorks and Wo
 import projectReport from "./assets/Hammer_Project_Report.pdf"
 
 function HammerProject({ setSelectedProject }) {
+  
+  // Fixes the issue where opening the project page starts at the bottom
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="hammer-page">
