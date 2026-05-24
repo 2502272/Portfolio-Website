@@ -1,10 +1,12 @@
 // Main Portfolio Website Structure and Layout (ALL IN ONE FILE)
+// Fully optimized for Tayyab Mahmood Adil
 
 import { useState } from "react"
 
 import profileImage from "./assets/Profile_Photo.jpg"
 import cvFile from "./assets/Tayyab_Mahmood_CV.pdf"
 
+// Project detail page component imports
 import F1HelmetProject from "./F1HelmetProject.jsx"
 import RoboticLegProject from "./RoboticLegProject.jsx"
 import HammerProject from "./HammerProject.jsx"
@@ -12,113 +14,93 @@ import V6Engine from "./V6Engine.jsx"
 import TrussBridgeProject from "./TrussBridgeProject.jsx"
 import HostelManagementProject from "./HostelManagementProject.jsx"
 
-// Projects Data - Defined directly in this file
+// Projects Data - Sequential mapping matching image and asset requirements
 const projects = [
   {
     id: 1,
     title: "F1 Helmet Design",
-    tech: "SolidWorks",
-    description: "A precision-based Formula 1 helmet concept designed with attention to aerodynamics, safety, and realistic engineering proportions.",
+    tech: "SolidWorks 2022",
+    description: "Designed using advanced aerodynamic surfacing techniques based on 2D reference blueprints. Applied complex surface modeling tools to achieve highly accurate shell geometry and fluid alignment.",
+    image: "./assets/projects/f1-helmet.jpg"
   },
   {
     id: 2,
     title: "Robotic Leg Mechanism",
-    tech: "SolidWorks",
-    description: "A mechanical robotic leg system developed with articulated movement concepts and engineered structural components.",
+    tech: "SolidWorks 2022",
+    description: "Modeled a complete robotic leg with a full joint assembly layout and mechanical motion simulation. Simulated precise ranges of motion to verify mechanism behavior under fixed movement constraints.",
+    image: "./assets/projects/robotic-leg.jpg"
   },
   {
     id: 3,
     title: "Multifunctional Hammer",
-    tech: "SolidWorks + Workshop",
-    description: "A practical workshop tool combining multiple functions into a single compact mechanical design with usability-focused engineering.",
+    tech: "SolidWorks + Workshop Project",
+    description: "Designed and physically fabricated a multi-use hammer intended to consolidate multiple workshop hand-tools. Gained extensive hands-on experience working directly with precision machining tolerances.",
+    image: "./assets/projects/multi-hammer.jpg"
   },
   {
     id: 4,
     title: "V6 Engine",
-    tech: "AutoCAD",
-    description: "A detailed V6 engine model created using AutoCAD with mechanical accuracy and component-based assembly structure.",
+    tech: "AutoCAD 2019",
+    description: "Recreated intricate internal combustion engine geometry focusing strictly on component tolerances and assembly constraints. Developed a deep understanding of component relationships and industrial fit clearances.",
+    image: "./assets/projects/v6-engine.jpg"
   },
   {
     id: 5,
     title: "Truss Bridge",
     tech: "SolidWorks + 3D Printed",
-    description: "A structurally optimized truss bridge designed in SolidWorks and physically manufactured using 3D printing techniques.",
+    description: "Designed a lightweight truss bridge structure using structural optimization targeting an exceptional mass-to-load ratio. Validated through physical 3D printing and load performance testing.",
+    image: "./assets/projects/truss-bridge.jpg"
   },
   {
     id: 6,
     title: "Hostel Management System",
-    tech: "C++",
-    description: "A console-based hostel management application programmed in C++ for handling student records and room management.",
-  },
+    tech: "C++ Programming",
+    description: "A console-based hostel management application programmed in C++ for handling student records, structural database inputs, and room management protocols.",
+    image: "./assets/projects/hostel-db.jpg"
+  }
 ]
 
 function Portfolio() {
-
     const [selectedProject, setSelectedProject] = useState(null)
 
-    /* Open Project Details Page */
-
+    /* Open Project Details Page mapping */
     if (selectedProject === "f1-helmet") {
-        return (
-            <F1HelmetProject
-                setSelectedProject={setSelectedProject}
-            />
-        )
+        return <F1HelmetProject setSelectedProject={setSelectedProject} />
     }
     if (selectedProject === "robotic-leg") {
-        return (
-            <RoboticLegProject setSelectedProject={setSelectedProject} />
-        )
+        return <RoboticLegProject setSelectedProject={setSelectedProject} />
     }
     if (selectedProject === "hammer") {
-        return (
-            <HammerProject setSelectedProject={setSelectedProject} />
-        )
+        return <HammerProject setSelectedProject={setSelectedProject} />
     }
     if (selectedProject === "v6-engine") {
-        return (
-            <V6Engine setSelectedProject={setSelectedProject} />
-        )
+        return <V6Engine setSelectedProject={setSelectedProject} />
     }
     if (selectedProject === "truss-bridge") {
-        return (
-            <TrussBridgeProject setSelectedProject={setSelectedProject} />
-        )
+        return <TrussBridgeProject setSelectedProject={setSelectedProject} />
     }
     if (selectedProject === "hostel-management") {
-        return (
-            <HostelManagementProject setSelectedProject={setSelectedProject} />
-        )
+        return <HostelManagementProject setSelectedProject={setSelectedProject} />
     }
 
     return (
-
         <div className="portfolio-container">
 
             {/* Hero Section */}
-
             <section className="hero-section" id="home">
-
                 <div className="hero-left">
-
                     <p className="hero-tag">
-                        Mechanical Engineering Student
+                        Air University | Department of Mechanical & Aerospace Engineering
                     </p>
-
                     <h1>
                         Tayyab Mahmood Adil
                     </h1>
-
                     <p className="hero-description">
-                        Passionate mechanical engineering student specializing in CAD
-                        design, 2D/3D modeling, and engineering-focused problem solving.
-                        Experienced with SolidWorks and AutoCAD, with a strong interest in
-                        transforming innovative ideas into practical and professional
-                        mechanical designs.
+                        Mechanical engineering student specializing in CAD design, 3D surface modeling, and structural optimization. 
+                        Operating a professional AutoCAD and engineering services hub with an emphasis on precise technical execution, balancing raw structural efficiency with clean assembly constraints.
                     </p>
 
                     <div className="hero-buttons">
-
                         <a
                             href={cvFile}
                             target="_blank"
@@ -127,42 +109,68 @@ function Portfolio() {
                         >
                             View CV
                         </a>
-
                         <a
-                            href={cvFile}
-                            download
+                            href="https://linkedin.com/in/tayyab-mahmood-adil-aaa8a5397"
+                            target="_blank"
+                            rel="noreferrer"
                             className="secondary-btn"
                         >
-                            Download CV
+                            LinkedIn Profile
                         </a>
-
+                        <a
+                            href="https://www.fiverr.com/users/adil_cadncode/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="fiverr-btn"
+                            style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                backgroundColor: '#1dbf73',
+                                color: '#ffffff',
+                                padding: '10px 24px',
+                                borderRadius: '4px',
+                                fontWeight: '700',
+                                marginLeft: '12px',
+                                textDecoration: 'none'
+                            }}
+                        >
+                            Hire Me on Fiverr
+                        </a>
                     </div>
-
                 </div>
 
                 <div className="hero-right">
-
                     <img
                         src={profileImage}
-                        alt="Tayyab Mehmood Adil"
+                        alt="Tayyab Mahmood Adil"
                     />
-
                 </div>
-
             </section>
 
-            {/* About Section */}
-
+            {/* About & Metrics Section */}
             <section className="about-section" id="about">
-
                 <h2>About Me</h2>
-
                 <p>
-                    Mechanical engineering student specializing in CAD design and 2D/3D modeling, with hands-on experience in 
-                    SolidWorks and AutoCAD. My goal is to design everything my mind imagines with a proper engineering approach. 
-                    I am currently looking for new opportunities in CAD design and freelance work. If you are looking for someone 
-                    who approaches every project with responsibility and dedication, let's connect!
+                    Mechanical engineering student at Air University specializing in CAD design and 2D/3D modeling, with hands-on experience in 
+                    SolidWorks and AutoCAD. My goal is to design everything my mind imagines with a proper engineering approach, balancing structural 
+                    efficiency with precise mechanical assembly. Active freelance designer operating under user profile handle @adilcadncode, delivering professional technical schematics globally.
                 </p>
+
+                {/* Highly Visual Engineering Stats Metrics */}
+                <div className="metrics-display-row" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px', margin: '30px 0' }}>
+                    <div className="metric-box" style={{ padding: '20px', background: '#111', borderRadius: '8px', borderLeft: '4px solid #1dbf73', textAlign: 'center' }}>
+                        <h3 style={{ fontSize: '2.5rem', color: '#1dbf73', margin: '0' }}>3.75</h3>
+                        <p style={{ margin: '5px 0 0', color: '#aaa', fontSize: '0.9rem' }}>Current Academic CGPA</p>
+                    </div>
+                    <div className="metric-box" style={{ padding: '20px', background: '#111', borderRadius: '8px', borderLeft: '4px solid #0077b5', textAlign: 'center' }}>
+                        <h3 style={{ fontSize: '2.5rem', color: '#0077b5', margin: '0' }}>5+</h3>
+                        <p style={{ margin: '5px 0 0', color: '#aaa', fontSize: '0.9rem' }}>Core Technical Projects</p>
+                    </div>
+                    <div className="metric-box" style={{ padding: '20px', background: '#111', borderRadius: '8px', borderLeft: '4px solid #ffffff', textAlign: 'center' }}>
+                        <h3 style={{ fontSize: '2.5rem', color: '#ffffff', margin: '0' }}>100%</h3>
+                        <p style={{ margin: '5px 0 0', color: '#aaa', fontSize: '0.9rem' }}>Design-for-Manufacturing Precision</p>
+                    </div>
+                </div>
 
                 {/* Quick Info Cards */}
                 <div className="about-info-grid">
@@ -172,30 +180,27 @@ function Portfolio() {
                     </div>
                     <div className="info-card">
                         <h4>📧 Email</h4>
-                        <p>t1412530@gmail.com</p>
+                        <p>11412530@gmail.com</p>
                     </div>
                     <div className="info-card">
                         <h4>📞 Phone</h4>
-                        <p>0336 5815973</p>
+                        <p>0336-5815973</p>
                     </div>
                 </div>
 
                 {/* Qualification Section */}
                 <div className="about-subsection">
                     <h3>🎓 Qualification</h3>
-                    
                     <div className="qualification-item">
                         <h4>Air University, Islamabad</h4>
                         <p className="degree">Bachelor of Mechanical Engineering</p>
-                        <p className="result">CGPA: 3.75 (Current)</p>
+                        <p className="result" style={{ color: '#1dbf73', fontWeight: '600' }}>CGPA: 3.75 (Current Academic Standing)</p>
                     </div>
-
                     <div className="qualification-item">
                         <h4>Army Public Schools & Colleges, Sarai Alamgir</h4>
                         <p className="degree">FSC (Pre-Engineering)</p>
                         <p className="result">Result: 87.1%</p>
                     </div>
-
                     <div className="qualification-item">
                         <h4>Saint Francis Schools & Colleges, Sarai Alamgir</h4>
                         <p className="degree">Matriculation (Science)</p>
@@ -203,32 +208,29 @@ function Portfolio() {
                     </div>
                 </div>
 
-                {/* Skills Section */}
+                {/* Technical Skills Sections */}
                 <div className="about-subsection">
-                    <h3>💻 Skills</h3>
-                    
+                    <h3>💻 Skills & Software Arsenal</h3>
                     <div className="skills-category">
-                        <h4>CAD Software</h4>
+                        <h4>CAD & Modeling Engine</h4>
                         <div className="skills-tags">
-                            <span>SolidWorks (Intermediate)</span>
-                            <span>AutoCAD 2D/3D (Intermediate)</span>
-                            <span>CAD Rendering</span>
+                            <span>SolidWorks (Surfacing, Mechanical Assemblies & Weldments)</span>
+                            <span>AutoCAD (2D Orthographic & 3D Drafting Layouts)</span>
+                            <span>CAD Photo-Realistic Rendering</span>
                         </div>
                     </div>
-
                     <div className="skills-category">
-                        <h4>Programming</h4>
+                        <h4>Programming & Engineering Logic</h4>
                         <div className="skills-tags">
-                            <span>C++ (Intermediate)</span>
+                            <span>C++ (Object-Oriented Programming & Console Logic)</span>
                         </div>
                     </div>
-
                     <div className="skills-category">
-                        <h4>Tools & Other</h4>
+                        <h4>Tools & Execution Practices</h4>
                         <div className="skills-tags">
-                            <span>Microsoft Office</span>
-                            <span>Workshop Machining</span>
-                            <span>3D Printing</span>
+                            <span>3D Printing & Slicing Optimization</span>
+                            <span>Workshop Machining & Precision Tolerances</span>
+                            <span>Microsoft Office Suite</span>
                         </div>
                     </div>
                 </div>
@@ -236,7 +238,6 @@ function Portfolio() {
                 {/* Languages Section */}
                 <div className="about-subsection">
                     <h3>🌐 Languages</h3>
-                    
                     <div className="languages-grid">
                         <div className="language-item">
                             <h4>English</h4>
@@ -244,11 +245,11 @@ function Portfolio() {
                         </div>
                         <div className="language-item">
                             <h4>German</h4>
-                            <p>A-1 (In Progress)</p>
+                            <p>A-1 Standard (In Progress)</p>
                         </div>
                         <div className="language-item">
                             <h4>Urdu</h4>
-                            <p>Native</p>
+                            <p>Native Fluency</p>
                         </div>
                         <div className="language-item">
                             <h4>Punjabi</h4>
@@ -256,67 +257,54 @@ function Portfolio() {
                         </div>
                     </div>
                 </div>
-
             </section>
 
-            {/* Projects Section */}
-
+            {/* Projects Section - Renders images sequentially based on structural definitions */}
             <section className="projects-section" id="projects">
-
-                <h2>Projects</h2>
-
+                <h2>Engineering Portfolio & Projects</h2>
                 <div className="projects-grid">
-
                     {projects.map((project) => (
-
-                        <div className="project-card" key={project.id}>
-
-                            <div className="project-top">
-
-                                <span className="project-tech">
-                                    {project.tech}
-                                </span>
-
+                        <div className="project-card" key={project.id} style={{ overflow: 'hidden' }}>
+                            {project.image && (
+                                <div className="project-img-wrapper" style={{ width: '100%', height: '180px', backgroundColor: '#111' }}>
+                                    <img 
+                                        src={project.image} 
+                                        alt={project.title} 
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                                    />
+                                </div>
+                            )}
+                            <div className="project-card-content" style={{ padding: '20px' }}>
+                                <div className="project-top">
+                                    <span className="project-tech">
+                                        {project.tech}
+                                    </span>
+                                </div>
+                                <h3>{project.title}</h3>
+                                <p>{project.description}</p>
+                                <button
+                                    className="details-btn"
+                                    onClick={() => {
+                                        const projectMap = {
+                                            1: "f1-helmet",
+                                            2: "robotic-leg",
+                                            3: "hammer",
+                                            4: "v6-engine",
+                                            5: "truss-bridge",
+                                            6: "hostel-management"
+                                        }
+                                        setSelectedProject(projectMap[project.id])
+                                    }}
+                                >
+                                    View Project Blueprints
+                                </button>
                             </div>
-
-                            <h3>
-                                {project.title}
-                            </h3>
-
-                            <p>
-                                {project.description}
-                            </p>
-
-                            <button
-                                className="details-btn"
-
-                                onClick={() => {
-                                    const projectMap = {
-                                        1: "f1-helmet",
-                                        2: "robotic-leg",
-                                        3: "hammer",
-                                        4: "v6-engine",
-                                        5: "truss-bridge",
-                                        6: "hostel-management"
-                                    }
-                                    setSelectedProject(projectMap[project.id])
-                                }}
-                            >
-                                View Details
-                            </button>
-
                         </div>
-
                     ))}
-
                 </div>
-
             </section>
-
         </div>
-
     )
-
 }
 
 export default Portfolio
