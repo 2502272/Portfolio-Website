@@ -1,5 +1,5 @@
-
 // Detailed F1 Helmet Project Showcase Page
+// Fully optimized with Tayyab's exact design specifications
 
 import "./ProjectPage.css"
 
@@ -14,161 +14,113 @@ import renderedView from "./assets/Projects/F1 Helment-SolidWorks/F1-Rendered Is
 function F1HelmetProject({ setSelectedProject }) {
 
   return (
-
     <div className="f1-project-page">
 
       <button
         className="back-btn"
         onClick={() => setSelectedProject(null)}
+        style={{ cursor: 'pointer' }}
       >
         ← Back To Portfolio
       </button>
 
       <div className="f1-project-header">
-
-        <span>
-          SolidWorks Project
-        </span>
-
-        <h1>
-          Formula 1 Helmet Design
-        </h1>
-
+        <span>SolidWorks Advanced Modeling</span>
+        <h1>Formula 1 Helmet Design</h1>
         <p>
-          A complete Formula 1 helmet designed entirely from scratch using
-          SolidWorks, inspired by real-world motorsport engineering,
-          aerodynamic principles, and advanced surface modeling techniques.
+          Started with nothing but 2D blueprints and designed a complete F1 helmet from scratch 
+          as a rigorous technical challenge. This project showcases advanced organic surfacing, precise clearances, 
+          and motorsport-inspired aerodynamic shaping.
         </p>
-
       </div>
 
+      {/* Main Image Gallery Grid */}
       <div className="f1-gallery-grid">
-
-        <img src={frontView} alt="Front View" />
-        <img src={backView} alt="Back View" />
-        <img src={sideView} alt="Side View" />
-        <img src={topView} alt="Top View" />
-        <img src={dualView} alt="Dual View" />
-        <img src={multiView} alt="Multi View" />
-        <img src={renderedView} alt="Rendered View" />
-
+        <img src={frontView} alt="F1 Helmet Front View" />
+        <img src={backView} alt="F1 Helmet Back View" />
+        <img src={sideView} alt="F1 Helmet Side View" />
+        <img src={topView} alt="F1 Helmet Top View" />
+        <img src={dualView} alt="F1 Helmet Dual View Perspective" />
+        <img src={multiView} alt="F1 Helmet Engineering Multiview Layout" />
+        <img src={renderedView} alt="F1 Helmet Rendered Isolated View" />
       </div>
 
+      {/* Project Engineering Breakdown */}
       <div className="f1-details-section">
-
-        <h2>
-          Project Breakdown
-        </h2>
+        <h2>Project Engineering Breakdown</h2>
 
         <div className="detail-card">
-
-          <h3>
-            Main Body Surface Design
-          </h3>
-
+          <h3>Main Body Surface Development</h3>
           <p>
-            The project began using only 2D blueprints and evolved into a
-            fully modeled F1 helmet. Creating the main helmet body helped in
-            understanding advanced surfacing workflows and managing complex
-            geometry structures.
+            Getting the main surface right taught me how to handle complex organic geometry and 
+            set the baseline path for every intersecting component that came after.
           </p>
-
         </div>
 
         <div className="detail-card">
-
-          <h3>
-            Debossing & Aerodynamic Flow
-          </h3>
-
+          <h3>Surface Debossing</h3>
           <p>
-            Debossed surface detailing was applied carefully to reflect
-            realistic airflow behavior and motorsport-inspired aerodynamic
-            shaping across the helmet shell.
+            Debossed the outer surface precisely to reflect real-world aerodynamic flow profiles. 
+            While it sounds simple, managing the curvature transitions matters heavily for fluid flow alignment.
           </p>
-
         </div>
 
         <div className="detail-card">
-
-          <h3>
-            Visor & Base Gasket
-          </h3>
-
+          <h3>Visor & Base Gasket Integration</h3>
           <p>
-            Special attention was given to visor alignment, tolerances,
-            visibility, and realistic gasket integration to simulate how
-            engineering components interact in practical applications.
+            Engineered with a strong focus on proper shell mating shape, tight manufacturing tolerances, and clear site lines. 
+            Developing the base gasket taught me how distinct physical components seamlessly meet in industrial assemblies.
           </p>
-
         </div>
 
         <div className="detail-card">
-
-          <h3>
-            Mouthpiece & Ventilation
-          </h3>
-
+          <h3>Mouthpiece & Structural Ventilation</h3>
           <p>
-            The ventilation system and mouthpiece design required ergonomic
-            thinking and smooth organic surfacing while maintaining controlled
-            airflow through compact spaces.
+            Pushed me to think deeply about human ergonomics, smooth surface lofting shapes, and 
+            maintaining unrestrictive, controlled airflow channels within very tight space boundaries.
           </p>
-
         </div>
 
         <div className="detail-card">
-
-          <h3>
-            Helmet Spoiler & Safety Features
-          </h3>
-
+          <h3>Aerodynamic Helmet Spoiler</h3>
           <p>
-            The spoiler was modeled to represent aerodynamic efficiency and
-            reduced drag, while the seatbelt mounting area focused on
-            motorsport safety integration.
+            Specifically designed to slice through boundary layer air and minimize trailing drag wake. 
+            Pure complex aerodynamic surfacing—and one of the most rewarding pieces of the model.
           </p>
-
         </div>
 
         <div className="detail-card">
-
-          <h3>
-            Rendering & Final Presentation
-          </h3>
-
+          <h3>Safety Parameters & Mounts</h3>
           <p>
-            Materials, textures, and racing-inspired livery were applied to
-            achieve a professional presentation and realistic visual output.
+            Integrated a designated seatbelt mounting anchor setup right into the base structure because 
+            driver safety systems always come first in elite motorsport layout rules.
           </p>
-
         </div>
 
+        <div className="detail-card">
+          <h3>Livery Rendering & Presentation</h3>
+          <p>
+            Applied technical material textures, physical properties, and a custom racing livery to 
+            achieve an exceptional high-fidelity engineering presentation.
+          </p>
+        </div>
       </div>
 
+      {/* Technical Skills Tag Row */}
       <div className="skills-used">
-
-        <h2>
-          Skills Applied
-        </h2>
-
+        <h2>Core Competencies Applied</h2>
         <div className="skills-grid">
-
           <span>Advanced Surfacing</span>
-          <span>Debossing</span>
-          <span>Shelling</span>
-          <span>Surface Lofting</span>
+          <span>Debossing & Extrusions</span>
+          <span>Shelling Parameters</span>
+          <span>Surface Lofting Conic Splines</span>
           <span>Aerodynamic Form Design</span>
-          <span>SolidWorks Modeling</span>
-
+          <span>Assembly Tolerancing</span>
         </div>
-
       </div>
 
     </div>
-
   )
-
 }
 
 export default F1HelmetProject
