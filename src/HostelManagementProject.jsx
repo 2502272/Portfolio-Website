@@ -56,8 +56,8 @@ function HostelManagementProject({ setSelectedProject }) {
               transition: 'all 0.3s ease',
               cursor: 'pointer'
             }}
-            onMouseEnter={(e) => e.target.style.backgroundColor = '#059669'}
-            onMouseLeave={(e) => e.target.style.backgroundColor = '#10b981'}
+            onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#059669' }}
+            onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#10b981' }}
           >
             📋 View Full Programming Project Report (PDF)
           </a>
@@ -214,12 +214,12 @@ function HostelManagementProject({ setSelectedProject }) {
               transition: "0.35s ease"
             }}
             onMouseEnter={(e) => {
-              e.target.style.transform = "translateY(-3px)";
-              e.target.style.boxShadow = "0 10px 25px rgba(59, 130, 246, 0.35)";
+              e.currentTarget.style.transform = "translateY(-3px)";
+              e.currentTarget.style.boxShadow = "0 10px 25px rgba(59, 130, 246, 0.35)";
             }}
             onMouseLeave={(e) => {
-              e.target.style.transform = "translateY(0)";
-              e.target.style.boxShadow = "none";
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "none";
             }}
           >
             View on GitHub →
